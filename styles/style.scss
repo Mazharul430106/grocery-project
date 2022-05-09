@@ -1,0 +1,612 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: 'Nunito', sans-serif;
+}
+
+$green:#27ae60;
+$black: #2c2c54;
+
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 1.7rem;
+    background: $green;
+    color: #fff;
+    padding: .8rem 3rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover{
+        background: $black;
+    }
+
+}
+
+*::selection{
+    background: #27ae60;
+    color: #fff;    
+
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    color: $green;
+
+    
+    span{
+        text-transform: uppercase;
+        color: $black;
+    }
+}
+
+.logo{
+    font-size: 3rem;
+    color: $black;
+    font-weight: bold;
+    i{
+        color: $green;
+        margin-right: .3rem;
+    }
+}
+
+// Header section style starts.
+
+.header-1{
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+  
+
+    .seacrh-box-container{
+        display: flex;
+        height: 5rem;
+
+        #seach-box{
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            font-size: 2rem;
+            color: #333;
+            border: .1rem solid rgba(0,0,0,.3);
+            text-transform: none;
+        }
+
+        label{
+            height: 100%;
+            width: 8rem;
+            line-height: 5.2rem;
+            font-size: 2rem;
+            background: $green;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.header-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    position: relative;
+    #menu-bar{
+        font-size: 3rem;
+        padding: .8rem 1.5rem;
+        border: .1rem solid rgba(0,0,0,.1);
+        border-radius: .5rem;
+        color: $black;
+        cursor: pointer;
+        display: none;
+    }
+
+    .navbar a{ 
+        font-size: 2rem;
+        color: $black;
+        padding: .5rem 1.5rem;
+        border-radius: .5rem;
+
+        &:hover{
+            background: $green;
+            color: #fff;
+        }
+
+    }
+
+    .icons a{    
+        padding-left: 1rem;
+        font-size: 2rem;
+        color: $black;
+
+        &:hover{
+            color: $green;
+        }
+    }
+
+    &.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+}
+
+// Header section style ends.
+
+// Home section style starts.
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .image{
+        flex: 1 1 40rem;
+        padding-top: 5rem;
+        img{
+            width: 100%;
+        }
+    }
+    .content{
+        flex: 1 1 40rem;
+
+        span{
+            font-size: 3rem;
+            color: #666;
+        }
+        h3{
+            font-size: 6rem;
+            color: $black;
+            line-height: 1.2;
+        }
+       
+    }
+
+}
+
+// Home section style ends.
+// banner section style starts.
+
+.banner-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .banner{
+        flex: 1 1 40rem;
+        height: 25rem;
+        position: relative;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            &:hover{
+                transform: scale(1.2) rotate(-5deg);
+            }
+        }
+
+        .content{
+      
+            position: absolute;
+            top: 50%;
+            left: 4%;
+            transform: translateY(-50%);
+            h3{
+                font-size: 3rem;
+                color: $black;
+            }
+
+            p{
+                font-size: 1.7rem;
+                color: #666;
+            }
+
+        }
+    }
+}
+
+// banner section style ends.
+// cetagory section style starts.
+.cetagory{
+   
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        .box{
+            border: .1rem solid rgba(0,0,0,.3);
+            border-radius: .5rem;
+            text-align: center;
+            padding: 2rem;
+            flex: 1 1 25rem;
+
+            h3{
+                font-size: 3.5rem;
+                color: $black;
+            }
+
+            p{
+                font-size: 2rem;
+                color: #666;
+                padding: .5rem 0;
+            }
+
+            img{
+                width: 20rem;
+                margin: 4rem 0;
+            }
+
+            .btn{
+                display: block;
+            }
+
+        }
+    }
+
+}
+
+// cetagory section style ends.
+
+// product section style starts.
+.product{
+
+    .products-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        .box{
+            border: .1rem solid rgba(0,0,0,.3);
+            border-radius: .5rem;
+            padding: 2rem;
+            text-align: center;
+            position: relative;    
+            overflow: hidden;
+            flex: 1 1 35rem;
+
+
+            .discount{
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                background: rgba(0,255,0,.1);
+                color: $green;
+                font-size: 1.5rem;
+                padding: .5rem 1rem;
+            }
+            .icons{
+                position: absolute;
+                top: 1rem;
+                right: -5rem;
+                a{
+                    font-size: 2rem;
+                    display: block;
+                    margin-top: .7rem;
+                    width: 4rem;
+                    height: 4rem;
+                    line-height: 4rem;
+                    background: rgba(0,0,0,.05);
+                    color: $black;
+                    border-radius: 50%;
+
+                    &:hover{
+                        background: $green;
+                        color: #fff;
+                    }
+                }
+
+            }
+
+            img{
+                height: 20rem;
+            }
+
+            h3{
+                font-size: 2.5rem;
+                color: $black;
+            }
+
+            .stars i{
+                padding: 1rem .1rem;
+                font-size: 1.7rem;
+                color: gold;
+            }
+
+            .price{
+                font-size: 2rem;
+                color: #333;
+                padding: .5rem 0;
+
+                span{
+                    font-size: 1.5rem;
+                    color: #999;
+                    text-decoration: line-through;
+                }
+
+            }
+
+            .quantity{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 1rem;
+                padding-bottom: .5rem;
+                span{
+                    padding: 0 .7rem;
+                    font-size: 1.7rem;
+                }
+
+                input{
+                    border: .1rem solid rgba(0,0,0,.3);
+                    padding: .5rem;
+                    font-size: 1.5rem;
+                    font-weight: bolder;
+                    color: $black;
+                    background: rgba(0,0,0,.05);
+                }
+
+
+            }
+
+            .btn{
+                display: block;
+            }
+
+
+            &:hover .icons{
+                right: 1rem; 
+            }
+
+        }
+    }
+}
+
+// product section style ends.
+// deal section style starts.
+
+.deal{
+    background: url(../images/deal-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    .content{
+
+        max-width: 50rem;
+        
+
+        .title{
+            font-size: 4rem;
+            color: $black;
+        }
+
+        p{
+            font-size: 1.7rem;
+            padding: 1rem 0;
+            color: $black;
+        }
+
+        .count-down{
+            display: flex;
+            gap: 1.5rem;
+            padding: .5rem 0;
+
+            .box{
+                width: 9rem;
+                border: .1rem solid rgba(0,0,0,.3);
+                text-align: center;
+                box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+
+                h3{
+                    color: $black;
+                    font-size: 5rem;
+                    width: 100%;
+                    height: 7rem;
+                    line-height: 7rem;
+                    background: #fff;
+                }
+
+                span{
+                    width: 100%;
+                    background: $black;
+                    color: #fff;
+                    font-size: 2rem;
+                    display: block;
+                    padding: .5rem 0;
+                }
+            }
+        }
+    }
+}
+
+// deal section style ends.
+
+// contact section style starts now.
+.contact{
+    form{
+        text-align: center;
+        padding: 2rem;
+        border: .1rem solid rgba(0,0,0,.3);
+        border-radius: .5rem;
+
+        .input-box{
+           display: flex;
+           justify-content: space-between;
+           gap: 1.5rem;
+           flex-wrap: wrap;
+            input{
+                width: 49%;
+                border: .1rem solid rgba(0,0,0,.3);
+                padding: 1rem 1.5rem;
+                margin: .5rem 0;
+                background: #f7f7f7;
+            }
+        }  
+        textarea{
+            width: 100%;
+            height: 20rem;
+            border: .1rem solid rgba(0,0,0,.3);
+            padding: 1rem 1.5rem;
+            margin: .5rem 0;
+            resize: none;
+            background: #f7f7f7;
+        }
+        
+
+    }
+
+ 
+}
+
+// contact section style ends now.
+
+// newsletter section style starts.
+
+.newsletter{
+    background: url(../images/newsletter-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 5rem 2rem;
+
+    h3{
+        font-size: 3rem;
+        color: $black;
+    }
+
+    form{
+        display: flex;
+        align-items: center;
+        max-width: 55rem;
+        margin: 1rem auto;
+        padding: 1.5rem;
+        background: rgba(0,0,0,.1);
+        
+        #email{
+            width: 100%;
+            padding: .7rem 1.5rem;
+            text-transform: none;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .btn{
+            margin-top: 0;
+        }
+
+    }
+}
+
+// newsletter section style ends.
+
+// footer section style stars.
+.footer{
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        
+        .box{
+            flex: 1 1 25rem;
+            padding: 1.5rem;
+
+           
+
+            h3{
+                font-size: 2.5rem;
+                color: $black;
+                padding-bottom: .7rem;
+            }
+            p{
+                font-size: 1.5rem;
+                padding-bottom: 1.5rem ;
+                padding-top: 1rem;
+                color: #666;
+            }
+
+            .share a{
+                width: 4rem;
+                height: 4rem;
+                line-height: 4rem;
+                text-align: center;
+                padding: 0;
+                margin: 0 .1rem;
+            }
+
+
+            .links{
+                a{
+                    display: block;
+                    padding: .5rem 0;
+                    font-size: 1.7rem;
+                    color: #333;
+
+                    &:hover{
+                        text-decoration: underline;
+                        color: $green;
+                    }
+                }   
+
+              
+
+            }
+        }
+
+    }
+
+    .creadit{
+        text-align: center;
+        font-size: 2rem;
+        padding: 2.5rem 0;
+        margin-top: 1rem;
+        font-weight: bold;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        span{
+            color: $green;
+        }
+    }
+
+
+}
+
+
+
+// footer section style ends.
